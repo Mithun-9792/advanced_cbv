@@ -38,7 +38,7 @@ class SchoolListView(ListView):
 
 
 class SchoolDetailView(DetailView):
-    context_object_name = 'school_details'
+    context_object_name = 'school_detail'
     model = models.School
     template_name = 'basic_app/school_detail.html'
 
@@ -54,7 +54,7 @@ class SchoolUpdateView(UpdateView):
 
 class SchoolDeleteView(DeleteView):
     model = models.School
-    success_url = reverse_lazy("basic_app:list")
+    success_url = reverse_lazy('basic_app:list')
 
 
 class CBView(View):
